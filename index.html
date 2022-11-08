@@ -12,6 +12,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <title>game-night</title>
 </head>
 
@@ -27,11 +28,22 @@
   </header>
   <main>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+      <section id="app" class="row">
+        <!-- PLAYERS GO HERE -->
+        <!-- <div class="col-6">
+          <h3>calvin</h3>
+          <h4>score</h4>
+          <button class="text-success" onclick=""><i class="mdi mdi-plus-outline"></i></button>
+          <button class="text-danger"><i class="mdi mdi-minus-box-outline"></i></button>
+        </div> -->
+        <div class="col-6">
+          <h3>${this.name}</h3>
+          <h4>${this.score}</h4>
+          <button class="text-success" onclick="app.playersController.addPoints('${this.name}')"><i
+              class="mdi mdi-plus-outline"></i></button>
         </div>
-      </div>
+      </section>
+    </div>
     </div>
   </main>
   <footer class="bg-dark text-light">
